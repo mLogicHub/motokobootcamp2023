@@ -1,6 +1,8 @@
 import Float "mo:base/Float";
 import Array "mo:base/Array";
 import Iter "mo:base/Iter";
+import Char "mo:base/Char";
+import Text "mo:base/Text";
 actor{
     // Challenge 1
     //let array = [10,23,30];
@@ -34,18 +36,26 @@ actor{
 
     // Challenge 4
     public func number_of_words(t : Text) : async Nat {
-
+        var temp : Nat =0;
+        let split_text = Text.split(t, #char(' '));
+        for (char in split_text){
+            if (Text.contains(char, #predicate(func(x){Char.isDigit(x)}))){
+            }else{
+                temp +=1;
+            };
+        };   
+        return temp;
     };
 
     // Challenge 5
 
-    public func find_duplicates(a : [Nat]) : async [Nat]{
+   // public func find_duplicates(a : [Nat]) : async [Nat]{
 
-    };
+    //};
 
     // Challenge 6
 
-    public func convert_to_binary(n : Nat) : async Text{
+    //public func convert_to_binary(n : Nat) : async Text{
         
-    };
+    //};
 };
