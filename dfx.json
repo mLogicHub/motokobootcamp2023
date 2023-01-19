@@ -3,6 +3,10 @@
         "day_1_canister": {
         "main": "day_1/day_1.mo",
         "type": "motoko" 
+    },
+    "day_2_canister": {
+        "main": "day_2/day_2.mo",
+        "type": "motoko" 
     }
 }
 
